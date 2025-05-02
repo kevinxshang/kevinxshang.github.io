@@ -1,0 +1,583 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Theme Toggle Button - Positioned Correctly */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: #444;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #666;
+}
+
+/* Triangle Inside Toggle Button */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid white;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+.dark-mode .profile-container {
+    background: #333;
+    color: #fff;
+}
+
+.dark-mode .btn {
+    background: #444;
+    color: white;
+}
+
+.dark-mode .btn:hover {
+    background: #666;
+}
+
+.dark-mode .theme-toggle {
+    background: white;
+}
+
+.dark-mode .triangle {
+    border-bottom-color: black;
+}
+
+/* Flip Effect */
+.flip-container {
+    perspective: 1000px;
+}
+
+.flipper {
+    position: relative;
+    width: 400px;
+    height: auto;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-container.flip-active .flipper {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Profile Section */
+.profile-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Fix social media icon sizes */
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Name and Subtitle */
+.name {
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Social Buttons */
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* 2x2 Grid for Flip Buttons */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.flip-btn {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background: #f7f7f7;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.flip-btn:hover {
+    background: #ddd;
+}
+
+.about-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-intro {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.about-card {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #555;
+}
+
+/* Dark Mode */
+.dark-mode .about-container {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .about-card {
+    background: #444;
+}
+
+.dark-mode .back-btn {
+    background: white;
+    color: black;
+}
+
+.dark-mode .back-btn:hover {
+    background: #ddd;
+}
+
+/* Arch Icons */
+.skills-arch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    /* Arch size */
+    height: 150px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.skills-arch img {
+    position: absolute;
+    width: 40px;
+    /* Adjust size */
+    height: 40px;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Icon positions along the arch */
+.skills-arch img:nth-child(1) {
+    transform: rotate(0deg) translateX(0px);
+}
+
+.skills-arch img:nth-child(2) {
+    transform: rotate(22.5deg) translateX(0px);
+}
+
+.skills-arch img:nth-child(3) {
+    transform: rotate(45deg) translateX(0px);
+}
+
+.skills-arch img:nth-child(4) {
+    transform: rotate(67.5deg) translateX(0px);
+}
+
+.skills-arch img:nth-child(5) {
+    transform: rotate(90deg) translateX(0px);
+}
+
+/* Add Gradient Border Effect */
+.back .profile-container {
+    box-shadow: 0px 0px 15px transparent;
+    /* Default no color */
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+/* Skills Frame */
+.skill-frame {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #d0d0d0;
+    /* Circle border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    /* Adjust to align within profile container */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    display: none;
+    /* Initially hidden */
+}
+
+/* Skills Image */
+.skill-img {
+    width: 60px;
+    /* Adjust to fit inside the circle */
+    height: 60px;
+    transition: transform 0.2s ease-in-out, opacity 0.2s;
+}
+
+/* Skills Page */
+.skills-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.skills-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Skill Groups */
+.skill-group {
+    margin-bottom: 30px;
+}
+
+/* Skill Line (Each Row of Skills) */
+.skills-line {
+    display: flex;
+    justify-content: center;
+    /* Centered while allowing max width */
+    flex-wrap: wrap;
+    /* Allows wrapping if needed on smaller screens */
+    gap: 40px;
+    /* Consistent spacing */
+    margin-top: 10px;
+}
+
+/* Individual Skill Item */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Ensures perfect centering */
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100px;
+    /* Fixed square size */
+    height: 100px;
+    /* Ensuring it's a square */
+    text-align: center;
+}
+
+/* Skill Icon */
+.skill-item img {
+    width: 60px;
+    /* Larger square icon */
+    height: 60px;
+    /* Ensures perfect scaling */
+    margin-bottom: 8px;
+    /* Space between icon and text */
+}
+
+/* Skill Text */
+.skill-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    margin: 0;
+}
+
+/* Hover Effect */
+.skill-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Groups */
+.skill-group {
+    margin-bottom: 30px;
+}
+
+.skill-group-title {
+    font-size: 18px;
+    /* Smaller than main title */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Default Underline */
+.skill-group-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: black;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Remove Underline on Hover */
+.skill-group-title:hover::after {
+    opacity: 0;
+    /* Make underline disappear */
+}
+
+/* Rectangle Effect on Hover */
+.skill-group-title::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    /* Make the rectangle slightly larger */
+    height: calc(100% + 10px);
+    border: 2px solid black;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show the Rectangle on Hover */
+.skill-group-title:hover::before {
+    opacity: 1;
+    transform: scale(1.05);
+    /* Slight expansion effect */
+}
+
+.tech-chip-btn {
+    background: none;
+    border: 2px solid grey;
+    /* Grey border */
+    cursor: pointer;
+    width: 60px;
+    /* Smaller button */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tech-chip-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.tech-chip-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Active-Hover Class */
+.skill-item.active-hover {
+    transform: scale(1.2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Projects Page Styling */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.project-card .btn:hover {
+    background: #555;
+}
+
+/* Dark Mode Styling */
+.dark-mode .projects-container {
+    background: #222;
+}
+
+.dark-mode .project-card {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .project-card .btn {
+    background: white;
+    color: black;
+}
+
+.dark-mode .project-card .btn:hover {
+    background: #ddd;
+}
+
+html {
+    scroll-behavior: smooth;
+}

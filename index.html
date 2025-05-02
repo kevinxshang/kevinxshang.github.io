@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Shang</title>
+    <link rel="stylesheet" href="styles_main.css">
+</head>
+
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <div class="triangle"></div>
+    </button>
+
+    <!-- Flip Container -->
+    <div class="flip-container" id="flipCard">
+        <div class="flipper">
+            <!-- Front Side -->
+            <div class="front">
+                <div class="profile-container">
+                    <img src="images/profile_6.jpg" alt="Profile Picture" class="profile-img" onclick="flipCard()">
+                    <h1 class="name">Kevin Shang</h1>
+                    <p class="subtitle">📍 New York</p>
+                    <div class="button-container">
+                        <a href="https://www.linkedin.com/in/kevin-x-shang" class="btn social-btn" target="_blank">
+                            <img src="images/linkedin_icon.png" alt="LinkedIn" class="icon"> LinkedIn
+                        </a>
+                        <a href="https://github.com/kevinxshang" class="btn social-btn" target="_blank">
+                            <img src="images/github_icon.png" alt="GitHub" class="icon"> GitHub
+                        </a>
+                        <a href="https://www.instagram.com" class="btn social-btn" target="_blank">
+                            <img src="images/insta_icon.png" alt="Instagram" class="icon"> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="back">
+                <div class="profile-container">
+                    <img src="images/profile_6.jpg" alt="Profile Picture" class="profile-img" onclick="flipCard()">
+                    <div class="button-grid">
+                        <button class="flip-btn">About</button>
+                        <button class="flip-btn skills-btn">Skills</button>
+                        <button class="flip-btn">Experience</button>
+                        <button class="flip-btn">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

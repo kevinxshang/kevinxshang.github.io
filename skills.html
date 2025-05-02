@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Skills</title>
+    <link rel="stylesheet" href="styles_pages.css">
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="site-name" onclick="window.location.href='index.html'">Kevin Shang</div>
+        <div class="nav-buttons-container">
+            <button class="nav_buttons" onclick="window.location.href='about.html'">Home</button>
+            <button class="nav_buttons" onclick="window.location.href='skills.html'">Skills</button>
+            <button class="nav_buttons" onclick="window.location.href='experience.html'">Experience</button>
+            <button class="nav_buttons" onclick="window.location.href='contact.html'">Contact</button>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <div class="triangle"></div>
+            </button>
+        </div>
+    </nav>
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <div class="triangle"></div>
+    </button>
+
+    <div class="skills-container">
+        <h1 class="skills-title">Technical Skills</h1>
+
+        <div class="skill-group">
+            <h2 class="skill-group-title">Programming & Databases</h2>
+            <div class="skills-line">
+                <div class="skill-item" id="python"><img src="images/python_icon.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill-item" id="mysql"><img src="images/mysql_icon.png" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill-item" id="r"><img src="images/r_icon.png" alt="R">
+                    <p>R</p>
+                </div>
+                <div class="skill-item" id="java"><img src="images/java_icon.png" alt="Java">
+                    <p>Java</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h2 class="skill-group-title">Data Science & ML</h2>
+            <div class="skills-line">
+                <div class="skill-item" id="numpy"><img src="images/numpy_icon.png" alt="NumPy">
+                    <p>NumPy</p>
+                </div>
+                <div class="skill-item" id="pandas"><img src="images/pandas_icon.svg" alt="Pandas">
+                    <p>Pandas</p>
+                </div>
+                <div class="skill-item" id="pytorch"><img src="images/pytorch_icon.png" alt="PyTorch">
+                    <p>PyTorch</p>
+                </div>
+                <div class="skill-item" id="jupyter"><img src="images/jupyter_icon.png" alt="Jupyter">
+                    <p>Jupyter</p>
+                </div>
+                <div class="skill-item" id="conda"><img src="images/conda_icon.png" alt="Conda">
+                    <p>Conda</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h2 class="skill-group-title">Cloud & DevOps</h2>
+            <div class="skills-line">
+                <div class="skill-item" id="aws"><img src="images/aws_icon.png" alt="AWS">
+                    <p>AWS</p>
+                </div>
+                <div class="skill-item" id="azure"><img src="images/azure_icon.png" alt="Azure">
+                    <p>Azure</p>
+                </div>
+                <div class="skill-item" id="bash"><img src="images/bash_icon.png" alt="Bash">
+                    <p>Bash</p>
+                </div>
+                <div class="skill-item" id="git"><img src="images/git_icon.png" alt="Git">
+                    <p>Git</p>
+                </div>
+                <div class="skill-item" id="spark"><img src="images/spark_icon.svg" alt="Spark">
+                    <p>Spark</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h2 class="skill-group-title">Web Development</h2>
+            <div class="skills-line">
+                <div class="skill-item" id="html"><img src="images/html_icon.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill-item" id="css"><img src="images/css_icon.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-item" id="javascript"><img src="images/javascript_icon.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <button class="tech-chip-btn" id="animateSkills">
+                <img src="images/tech_icon.png" alt="Animate Skills">
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

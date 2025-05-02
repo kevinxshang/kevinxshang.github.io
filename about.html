@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Kevin Shang</title>
+    <link rel="stylesheet" href="styles_pages.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="site-name" onclick="window.location.href='index.html'">Kevin Shang</div>
+            <div class="nav-buttons-container">
+                <button class="nav_buttons" onclick="window.location.href='about.html'">Home</button>
+                <button class="nav_buttons" onclick="window.location.href='skills.html'">Skills</button>
+                <button class="nav_buttons" onclick="window.location.href='experience.html'">Experience</button>
+                <button class="nav_buttons" onclick="window.location.href='contact.html'">Contact</button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <div class="triangle"></div>
+                </button>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section class="about-section">
+            <div class="about-left">
+                <h2 class="top-section-heading">Hello!</h2>
+
+                <p><br>
+                    I’m Kevin Shang, a Financial Engineering student at Cornell.</p>
+                <p>I apply statistical modeling and algorithmic thinking to solve complex problems in finance.</p>
+            </div>
+            <div class="about-right">
+                <img src="images/profile_pic2.jpg" alt="Kevin Shang" class="profile-img">
+            </div>
+        </section>
+        <hr class="section-divider">
+
+
+        <section class="education-section">
+            <h2 class="section-heading">Education</h2>
+            <div class="education-cards">
+                <div class="edu-card">
+                    <img src="images/school_logo.png" alt="school logo">
+                    <div class="edu-text">
+                        <strong>Cornell University</strong><br>
+                        B.S. in Information Science; Statistics
+                    </div>
+
+                </div>
+                <div class="edu-card">
+                    <img src="images/school_logo.png" alt="school logo">
+                    <div class="edu-text">
+                        <strong>Cornell University</strong><br>
+                        Master of Financial Engineering
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2 class="section-heading">Experience</h2>
+            <div class="experience-cards">
+                <a href="experience.html#cubist" class="exp-card-wrapper">
+                    <div class="exp-card exp-cubist">
+                        <div class="exp-text-box"><span>Cubist Systematic</span></div>
+                    </div>
+                </a>
+                <a href="experience.html#basf2024" class="exp-card-wrapper">
+                    <div class="exp-card exp-basf24">
+                        <div class="exp-text-box"><span>BASF 2024</span></div>
+                    </div>
+                </a>
+                <a href="experience.html#basf2023" class="exp-card-wrapper">
+                    <div class="exp-card exp-basf23">
+                        <div class="exp-text-box"><span>BASF 2023</span></div>
+                    </div>
+                </a>
+                <a href="experience.html#geodata" class="exp-card-wrapper">
+                    <div class="exp-card exp-geodata">
+                        <div class="exp-text-box"><span>CU GeoData</span></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 class="section-heading">Projects</h2>
+            <div class="project-grid">
+                <div class="project-square">
+                    <div class="project-title">Adaptive BackTester</div>
+                    <p class="project-summary">A dynamic tool for evaluating trading strategies under evolving market
+                        conditions.</p>
+                </div>
+                <div class="project-square">
+                    <div class="project-title">Agentic Trading System</div>
+                    <p class="project-summary">An AI-based system that reads financial text to generate and execute
+                        trades.</p>
+                </div>
+                <div class="project-square">
+                    <div class="project-title">Market-Neutral Engine</div>
+                    <p class="project-summary">Builds hedged portfolios based on beta estimation and historical
+                        co-movement.</p>
+                </div>
+                <div class="project-square">
+                    <div class="project-title">Alpha Signal Scanner</div>
+                    <p class="project-summary">Scans historical data to find statistically significant alpha predictors.
+                    </p>
+                </div>
+                <div class="project-square">
+                    <div class="project-title">Portfolio Risk Visualizer</div>
+                    <p class="project-summary">Visualizes risk exposures using VaR, CVaR, and correlation heatmaps.</p>
+                </div>
+                <div class="project-square">
+                    <div class="project-title">Execution Cost Optimizer</div>
+                    <p class="project-summary">Minimizes execution price slippage through backtested signal-threshold
+                        logic.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Kevin Shang</title>
+    <link rel="stylesheet" href="styles_pages.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="site-name" onclick="window.location.href='index.html'">Kevin Shang</div>
+        <div class="nav-buttons-container">
+            <button class="nav_buttons" onclick="window.location.href='about.html'">Home</button>
+            <button class="nav_buttons" onclick="window.location.href='skills.html'">Skills</button>
+            <button class="nav_buttons" onclick="window.location.href='experience.html'">Experience</button>
+            <button class="nav_buttons" onclick="window.location.href='contact.html'">Contact</button>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <div class="triangle"></div>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="container">
+            <div class="left">
+                <h1>Contact Me</h1>
+                <p>Feel free to use the form or reach out through any of the platforms below.</p>
+
+                <div class="button-container">
+                    <a href="mailto:xs235@cornell.edu" class="btn social-btn" target="_blank">
+                        <img src="images/email_icon.png" alt="Email" class="icon"> Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/kevin-x-shang" class="btn social-btn" target="_blank">
+                        <img src="images/linkedin_icon.png" alt="LinkedIn" class="icon"> LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com" class="btn social-btn" target="_blank">
+                        <img src="images/insta_icon.png" alt="Instagram" class="icon"> Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="right">
+                <form>
+                    <div class="name-group">
+                        <div>
+                            <label for="firstName">Name</label>
+                            <input type="text" id="firstName" placeholder="First" />
+                        </div>
+                        <div>
+                            <label>&nbsp;</label>
+                            <input type="text" id="lastName" placeholder="Last" />
+                        </div>
+                    </div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@email.com" />
+
+                    <label for="phone">Phone (optional)</label>
+                    <input type="text" id="phone" placeholder="xxx-xxx-xxxx" />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Type your message ..."></textarea>
+
+                    <button type="submit" class="fly-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
